@@ -11,23 +11,28 @@ export default function CharacterList() {
     axios.get('https://rickandmortyapi.com/api/character/')
       .then(res => {
         // const data = res.data.results;
-        console.log('hey', chars);
+        
         setChars(res.data.results);
       })
       .catch(err => {console.log('uh oh', err)})
-  },[chars])
+  },[])
 
  
- 
+  
 
 
   return (
     <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
-      {chars.map( () => {
+      
+      {console.log('hey', chars)}
+      
+      {chars.map( item => {
+        const episodes = item.episode.length;
         return (
-          <CharacterCard name={chars.name} image={chars.image} episode={chars.episode.length()} status={chars.status}/>
-        )
+
+          <CharacterCard name={item.name} image={item.image} episode={episodes} status={item.status} species={item.species}/>
+          
+        );
       })}
     </section>
   );
