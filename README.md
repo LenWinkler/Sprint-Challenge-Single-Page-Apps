@@ -29,6 +29,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 > Answer:
 
+    Client-side routing allows us to avoid making a call to a server every time we want to display something different. It allows us to sort of simulate having multiple pages by choosing which components are rendered when. There is a little more loading time up front (everything is loaded one time at the beginning) but switching between pages is much faster since we don't have to request anything from a server.
+
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
