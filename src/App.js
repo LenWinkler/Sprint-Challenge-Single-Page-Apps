@@ -1,6 +1,6 @@
-import React, { useState, useEffect} from "react";
+import React from "react";
 import Header from "./components/Header.js";
-import axios from "axios";
+import CharacterList from "./components/CharacterList"
 
 
 
@@ -9,7 +9,7 @@ export default function App() {
   return (
     <main>
       <Header />
-
+      <CharacterList />
     </main>
   );
 }

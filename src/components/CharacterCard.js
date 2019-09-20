@@ -1,10 +1,11 @@
 import React from "react";
 
-export default function CharacterCard({ chars }) {
-  return <div>
-    <img>{chars.image}</img>
-    <h2>Name: {chars.name}</h2>
-    <p>Appeared in {chars.episode.length} episodes</p>
-    <p>Current status: [{chars.status}]</p>
+export default function CharacterCard({ image, name, episode, status}) {
+  // console.log('props', props);
+  return <div className="char-card">
+    <img>{image}</img>
+    <h2>Name: {name}</h2>
+    <p>Appeared in {episode} episodes</p>
+    <p>Current status: [{status}]</p>
     </div>
 }
